@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 2px solid #7289da;
+}
+
+header h1 {
+    color: #7289da;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    color: #7289da;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Discord Channels */
+.channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.channel-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.channel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.channel-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+.channel-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7289da;
+}
+
+.channel-content h3 {
+    color: #7289da;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.channel-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.discord-btn {
+    background: #7289da;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.discord-btn:hover {
+    background: #5b73c4;
+}
+
+/* Contacts */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+}
+
+.contact-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #7289da;
+}
+
+.contact-content h3 {
+    color: #7289da;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+.contact-content p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.contact-btn {
+    background: transparent;
+    color: #7289da;
+    border: 2px solid #7289da;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #7289da;
+    color: white;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    .channel-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .channel-card,
+    .contact-card {
+        padding: 20px;
+    }
+
+    .channel-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .discord-btn,
+    .contact-btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    header {
+        margin-bottom: 30px;
+        padding: 15px 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .channel-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-image {
+        width: 80px;
+        height: 80px;
+    }
+}
